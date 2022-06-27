@@ -68,7 +68,7 @@ if (day > 7 || day < 1)
 Задача 3. 
 Пользователь вводит число, а программа вернет значение квадрата
 этого числа.
-*/
+
 
 int num, quad;
 
@@ -78,3 +78,21 @@ num = Convert.ToInt32(Console.ReadLine());
 quad = num * num;
 
 Console.Write("Квадрат введенного числа "+ quad);
+
+
+Задача 4.
+Пользователь вводит число, а программа выводит все числа от равного по значению,
+но с другим знаком до этого числа.
+*/
+
+int n, current;
+
+Console.Write("Input a number: ");
+n = Convert.ToInt32(Console.ReadLine());
+
+current = n*(-1);
+while(current <= n)
+{
+    Console.Write(current + " ");
+    current++; //current = current +1
+}
