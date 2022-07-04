@@ -1,0 +1,67 @@
+// Задача 1. Необходимо написать программу, которая принимает на вход номер четверти и
+// выводит диапазон возможных координат в этой четверти.
+
+/*
+void ShowArea(int quart)
+{
+    if(quart >=1 && quart <= 4)
+    {
+        if(quart == 1)  Console.WriteLine("In this quat x > 0 and y > 0");
+        if(quart == 2)  Console.WriteLine("In this quat x < 0 and y > 0");
+        if(quart == 3)  Console.WriteLine("In this quat x < 0 and y < 0");  
+        if(quart == 4)  Console.WriteLine("In this quat x > 0 and y < 0");
+    }
+    else
+        Console.WriteLine("The number is uncorrect");
+}
+
+
+Console.Write("Input a number of quart:  ");
+int numQuart = Convert.ToInt32(Console.ReadLine());
+
+ShowArea(numQuart);
+
+
+
+// Задача 2. Необходимо написать программу которая принимает на вход координаты
+// точки (х,у) и выдает номер четверти в которой эта точка находится.
+
+
+
+int ShowQuart(int x , int y)  // Метод показывает четверть.
+{
+    int result = -1;
+    
+    if (x>0 && y>0) result = 1;
+    if (x<0 && y>0) result = 2;
+    if (x<0 && y<0) result = 3;
+    if (x>0 && y<0) result = 4;
+    return result;
+}
+
+    Console.WriteLine("Введите координаты х:  ");
+    int xx = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите координаты y:  ");
+    int yy = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(ShowQuart(xx , yy));
+
+*/
+
+
+// Задача 3. Необходимо написать программу которая принимает на вход какое-то число N
+// целое и возвращает квадраты всех чисел от 1 до N. Например: 4 -> 1, 4, 9, 16.
+
+
+void Quad(int x)
+{
+    int current = 1;
+    while (current <= x)
+    {
+        int quad = current * current;
+        Console.Write(quad + "  ");
+        current++;
+    }
+}
+Console.WriteLine("Введите число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Quad(n);
