@@ -1,0 +1,105 @@
+// Задача. Необходимо написать программу которая принимает на вход 
+// некоторое число и выдаёт сумму чисел от 1 до а.
+/*
+
+int FindSum(int a)
+{
+    int sum = 0;
+    for(int current = 1; current <= a; current++)
+        sum += current; // sum = sum + current
+
+        return sum;
+}
+
+Console.Write("Input positiv integer number:  ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Sum of numbers from 1 to {num} is {FindSum(num)}");
+// Значок $ позволяет взять информацию в {...} и подставить значения!
+
+*/
+
+
+
+
+
+
+// Задача. Программа принимает на вход число и выдаёт 
+// количество цифр в этом числе. Сколько цифр включает в себя число?
+
+
+/*                 //Первый вариант решения
+
+int Numbers(int num)
+{
+    int a = 0;   // Количество циклов ( = количеству цифр)
+
+    while(num > 0)
+    {
+        num = num / 10;
+        a++;   
+    }
+    return a;
+}
+
+Console.WriteLine("Введите число:  ");
+int num = Convert.ToInt32(Console.ReadLine());
+int number = Numbers(num);
+Console.WriteLine("Количество цифр в числе:  "+ number);
+*/
+
+/*                //Второй вариант решения
+
+int Kolich(int num)
+{
+    int result = 1;
+    int i = 1;
+    while(num / i >10)
+    {
+        i = i * 10;
+        result++;
+    }
+    return result;
+}
+Console.Write("Введите число  ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Kolich(n));
+*/
+
+// Задача. Необходимо написать программу которая принимает на вход 
+// число n и выдаёт произведение чисел от 1 до n.
+
+
+/*
+int Factorial(int n)
+{
+    int x = 1;
+    for(int current = 1; current <= n; current++)
+    x = x * current;
+    return x;
+}
+
+Console.Write("Введите число:  ");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Результат  {Factorial(num)}");
+*/
+
+
+
+// Задача. Необходимо написать программу, которая принимает на вход 
+// два числа a и b, и возводит a в степень b.
+
+
+int Stepen(int a, int b)
+{
+    int result = 1; //промежуточное значение
+    for(int i = 1; i <= b; i++)
+        result = result * a;
+    return result;    
+}
+
+Console.Write("Введите первое число:  ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число:  ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Stepen(n , m));
