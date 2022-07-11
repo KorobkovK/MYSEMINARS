@@ -1,0 +1,61 @@
+// Задача.
+// Необходимо задать массив из 12 элементов заполненный случайными числами в промежутке
+// от -9 до 9 и найти сумму положительных элементов данного массива.
+
+
+// Первый метод генерирует массив случайным образом.
+/*
+int[] RandomArray(int size, int minValue, int maxValue)
+{
+    int[] newArray = new int[size];  // эта строка инициализирует массив newArray
+    
+    for(int i = 0; i < size; i++)
+        newArray[i] = new Random().Next(minValue, maxValue +1);
+
+    return newArray;    
+}
+
+Console.Write("Input size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input min possible value of elements: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value of elements: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] array1 = RandomArray(size, min, max);
+
+ShowArray(array1);
+*/
+
+
+// Второй метод позволит вводить пользователю любые целые числа.
+
+int[] CreateArray(int size)
+{
+    int[] newArray = new int [size];
+    
+    Console.Write("Creating array here:");
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Input {i + 1} element: ");
+        newArray[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    Console.WriteLine();
+    return newArray;
+}
+
+
+// Третий метод позволяет вывести на экран массив
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine();   
+}
+
+Console.Write("Input size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int [] array2 = CreateArray(size);
+ShowArray(array2);
