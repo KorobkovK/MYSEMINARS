@@ -1,0 +1,179 @@
+// Задача. Необходимо написать программу которая "перевернёт" одномерный массив.
+
+/*
+int[] ReverseArray(int[] array)
+
+{
+    for(int i = 0; i < array.Length / 2; i++)
+    // i < array.Length / 2   т.к. должны дойти до середины массива 
+    {
+        int temp = array[i];
+        array[i] = array[array.Length - 1 -i];
+        // array[array.Length - 1 -i]  т.к. последний элемент массива сдвигается к середине
+        // array.Length - 1  это индекс последнего элемента
+        array[array.Length - 1 -i] = temp;
+    }
+    return array;*/
+
+    // Можно записать короче. Второй вариант записи.
+    /*
+    int lastIndex = array.Length - 1;
+    for(int i = 0; i < array.Length / 2; i++)
+    {
+        int temp = array[i];
+        array[i] = array[lastIndex - i];
+        array[lastIndex - i] = temp;
+    }
+
+    return array;*/
+
+    // Можно записать ещё короче. Третий вариант.
+    /*
+    for(int i = 0, j = array.Length - 1; i < j; i++, j--)
+    {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    return array;
+    */
+    // Решение через цикл While. Четвёртый вариант.
+    /*
+    int i = 0, j = array.Length - 1;
+
+    while(i < j)
+    {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+        
+        i++;
+        j--;
+    }
+    return array;
+}*/
+/*
+int[] myArray = {3, 5, 1, 8, 2, 9, 4};
+myArray = ReverseArray(myArray);
+
+for(int i = 0; i < myArray.Length; i++)
+    Console.Write(myArray[i] + " ");
+*/
+
+
+
+
+// 18 / 2 -> 9 0
+//  9 / 2 -> 4 1
+//  4 / 2 -> 2 0
+//  2 / 2 -> 1 0
+//  1 / 2 -> 0 1
+
+//  18 = 10010 в двоичной системе
+
+// Задача. Необходимо написать программу которая будет преобразовывать
+// десятиричные числа в двоичные.
+
+/*
+string ChangeDigitSystem(int num)
+{
+    string resultNumber = string.Empty;
+
+    while(num > 0)
+    {
+        resultNumber = num % 2 + resultNumber;
+        // Важна поледовательность, т.к. в string мы не складываем, а "приклеиваем"!!!
+        num /= 2; // то же самое, что и num = num / 2;
+    }
+
+    return resultNumber;
+}
+
+Console.WriteLine(ChangeDigitSystem(18));
+*/
+
+
+// Задача. Необходимо написать программу, которая принимает на вход три числа
+// и проверяет может ли существовать треугольник со сторонами такой длины.
+
+/*
+void Triangle(int a, int b, int c)
+{
+    if(a < b + c && b < a + c && c < a + b)
+        Console.WriteLine("Треугольник можно построить.");
+    else
+       Console.WriteLine("Треугольник нельзя построить.");     
+}
+
+Console.WriteLine("Input a number:  ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input b number:  ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input c number:  ");
+int c = Convert.ToInt32(Console.ReadLine());
+Triangle(a, b, c);
+*/
+
+// Решение этой задачи через bool. Второй метод.
+/*
+bool Triangle(int a, int b, int c)
+{
+    if(a < b +c && b < a + c && c < a + b) return true;
+    else return false;
+}
+
+Console.WriteLine(Triangle(17, 4, 5));
+*/
+
+// Другая запись через bool.
+/*
+bool Triangle(int a, int b, int c)
+{
+    return a < b + c && b < a + c && c < a + b;
+}
+
+bool isTriangle = false;
+isTriangle = Triangle(4, 2, 3);
+Console.WriteLine(isTriangle);
+*/
+
+
+// Задача. Необходимо без использования рекурсии вывести первое N чисел Фибоначчи
+// учитывая, что первые два из них это 0 и 1.
+
+// 0 1 1 2 3 5 8 13 21 34 и т.д. складываем два соседних числа
+
+/*
+int[] Fibonaccy(int n)
+{
+    int[] newArray = new int[n];
+    Console.Write("Creating array here: ");
+    newArray[0] = 0;
+    newArray[1] = 1;
+    for(int i = 2; i < n; i++)
+    {
+        newArray[i] = newArray[i - 1] + newArray[i - 2];
+    }
+    return newArray;
+}
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine(); // Пустая строка для перехода для ввода данных. 
+}
+
+Console.Write("Input your number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+ShowArray(Fibonaccy(num));
+*/
+
+
+
+double num = Convert.ToDouble(Console.ReadLine());
+double num = new Random().NextDouble();
+5.4 = 5.0 + 0.4
+
