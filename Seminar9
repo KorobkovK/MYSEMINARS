@@ -1,1 +1,106 @@
 // Задача
+// Необходимо задать значение N и написать программу которая выведет
+// все натуральные числа в промежутке от 1 до N.
+
+/*
+void ShowNums(int n)  // Первый вариант вывода на консоль
+{
+    if(n > 1)
+        ShowNums(n - 1);
+    Console.Write(n + " ");    
+}
+
+ShowNums(5);
+*/
+
+/*
+void ShowNums(int n)  // Второй вариант вывода на консоль
+{
+    if(n > 1)
+    {
+        Console.Write(n + " ");
+        ShowNums(n - 1);
+    }
+    Console.Write(n + " ");    
+}
+
+// (5) -> (4) -> (3) -> (2) -> (1) -> (2) -> (3) -> (4) -> (5)
+
+ShowNums(5);
+*/
+
+
+
+// Задача.
+// Написать программу которая принимает на вход число и возвращает
+// сумму цифр в этом числе.
+
+/*
+void ShowNums(int n)  // Второй вариант вывода на консоль
+{
+    if(n > 1)
+    {
+        Console.Write(n + " ");
+        ShowNums(n - 1);
+    }
+    Console.Write(n + " ");    
+}
+
+int SumOfDigits(int n)
+{
+    if(n >= 10)
+    {
+        return n % 10 + SumOfDigits(n / 10);
+    }
+    else return n;
+}
+
+// 12345 -> 1234 -> 123 -> 12 -> 1
+// 5 + 4 + 3 + 2 + 1
+
+
+ShowNums(5);
+Console.WriteLine();
+Console.WriteLine(SumOfDigits(12345));
+*/
+
+
+
+// Задача.
+// Необходимо задать значения M и N, и написать программу которая
+// выведет все натуральные числа в промежутке M N.
+
+/*
+void ShowNum(int m , int n)
+{
+    if(n > m)
+    {
+        ShowNum(m , n - 1);
+    }
+    Console.Write(n + " ");
+}
+
+ShowNum(2 , 12);
+*/
+
+
+
+
+// Задача.
+// Написать программу которая принимает на вход два числа А и Б
+// и возводит А в целую степень Б с помощью рекурсии.
+
+
+int Degree(int a , int b)
+{
+    if(b > 1)
+    {
+        return a * Degree(a , b - 1);
+    }
+    else return a;
+}
+
+Console.WriteLine();
+Console.WriteLine(Degree(3 , 4));
+
+
